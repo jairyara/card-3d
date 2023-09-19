@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    object-fit: contain;
+    perspective: 200px;
+    position: relative;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.card img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+}
+
+.contaner .onLeave{
+    transition: transform .3s ease;
+}
+
+.card:hover img:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+    transition: all 0.5s ease-in-out;
+}
+
+.card:not(:first-child) {
+    margin-left: -70px;
+}
